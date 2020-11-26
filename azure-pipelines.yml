@@ -5,6 +5,9 @@
 
 name: '$(version).$(Rev:r)'
 
+variables:
+  versionNumber: '$(version).$(Rev:r)'
+
 trigger:
 - main
 
@@ -19,15 +22,16 @@ variables:
 steps:
 - task: NuGetToolInstaller@1
 
+
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
 
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'publish'
+    command: 'build'
     publishWebProjects: true
-    arguments: '-c Release'
+    arguments: '--configuration Release /p:Version=$(versionNumber)'
 
 - task: PublishBuildArtifacts@1
   inputs:
