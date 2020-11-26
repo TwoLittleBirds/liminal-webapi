@@ -15,7 +15,6 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  versionNumber: $(version).$(Build.BuildNumber)
 
 steps:
 - task: NuGetToolInstaller@1
@@ -29,7 +28,7 @@ steps:
   inputs:
     command: 'build'
     publishWebProjects: true
-    arguments: '--configuration $(buildConfiguration) /p:Version=$(versionNumber)'
+    arguments: '--configuration $(buildConfiguration) /p:Version=$(Build.BuildNumber)'
 
 - task: PublishBuildArtifacts@1
   inputs:
