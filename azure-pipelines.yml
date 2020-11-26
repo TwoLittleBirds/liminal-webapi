@@ -1,7 +1,9 @@
-# ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting the full .NET Framework.
-# Add steps that publish symbols, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+
+name: '$(version).$(Rev:r)'
 
 trigger:
 - main
@@ -13,40 +15,25 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  major: 1
-  minor: 1
-
-name: $(major).$(minor)$(Rev:.r)
 
 steps:
-- task: DotNetCoreCLI@2
-  displayName: Restore
+- task: NuGetToolInstaller@1
+
+
+- task: NuGetCommand@2
   inputs:
-    command: restore
-    projects: '$(Parameters.RestoreBuildProjects)'
-
-#- task: DotNetCoreCLI@2
-#  displayName: Build
-#  inputs:
-#    projects: '$(Parameters.RestoreBuildProjects)'
-#    arguments: '--configuration $(BuildConfiguration)'
-
-# - task: DotNetCoreCLI@2
-#  displayName: Test
-#  inputs:
-#    command: test
-#    projects: '$(Parameters.UnitTestProjects)'
-#    arguments: '--configuration $(BuildConfiguration)'
+    restoreSolution: '$(solution)'
 
 - task: DotNetCoreCLI@2
-  displayName: Publish
   inputs:
-    command: publish
-    publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --output "$(build.artifactstagingdirectory)"'
-    zipAfterPublish: True
+    command: 'build'
+    publishWebProjects: true
+    arguments: '--configuration $(buildConfiguration) /p:Version=$(Build.BuildNumber)'
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+
