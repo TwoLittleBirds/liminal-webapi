@@ -39,13 +39,11 @@ steps:
 #  inputs:
 #    advance: true
 
-- task: AutoAppVersion@1
+- task: SetAssemblyVersion@2018
   inputs:
-    ProjectFile: 'liminal-webapi/liminal-webapi.csproj'
-    VersionVariable: '$(Build.BuildNumber)'
-    DevOpsPAT: 'azlgjhjugp4xlyb2nhpp2n6locwzblneirhvfc7vzvujqfg2x6vq'
+    SourceDirectory: '$(Build.SourcesDirectory)'
+    BuildNumber: '$(Build.BuildNumber)'
     SetAssemblyVersion: true
-    SetFileVersion: true
   
 - task: DotNetCoreCLI@2
   inputs:
