@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
+    <Version>1.0.0.0</Version>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>liminal_webapi</RootNamespace>
     <UserSecretsId>8fa070ec-ed2b-4ba0-b719-2619cf2d48f1</UserSecretsId>
