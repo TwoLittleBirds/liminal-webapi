@@ -24,16 +24,17 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    publishWebProjects: true
-    arguments: '--configuration $(buildConfiguration) /p:Version=$(Build.BuildNumber)'
+#- task: DotNetCoreCLI@2
+#  inputs:
+#    command: 'build'
+#    publishWebProjects: true
+#    arguments: '--configuration $(buildConfiguration) /p:Version=$(Build.BuildNumber)'
 
-- task: ResharperCli@2
-  inputs:
-    solutionOrProjectPath: 'liminal-webapi.sln'
-    failBuildLevelSelector: 'Error'
+#- task: ResharperCli@2
+#  inputs:
+#    solutionOrProjectPath: 'liminal-webapi.sln'
+#    failBuildLevelSelector: 'Error'
+
     
 - task: DotNetCoreCLI@2
   inputs:
@@ -41,6 +42,7 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
+
 
 - task: PublishBuildArtifacts@1
   inputs:
