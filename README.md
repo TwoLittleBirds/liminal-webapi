@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/TwoLittleBirds/liminal-webapi/_apis/build/status/liminal-webapi?branchName=main)](https://dev.azure.com/TwoLittleBirds/liminal-webapi/_build/latest?definitionId=11&branchName=main)
+[![Build Status](https://dev.azure.com/TwoLittleBirds/liminal/_apis/build/status/TwoLittleBirds.liminal-webapi?branchName=main)](https://dev.azure.com/TwoLittleBirds/liminal/_build/latest?definitionId=12&branchName=main)
 
 # liminal-webapi
 
