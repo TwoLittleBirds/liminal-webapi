@@ -35,6 +35,9 @@ steps:
 #    solutionOrProjectPath: 'liminal-webapi.sln'
 #    failBuildLevelSelector: 'Error'
 
+- task: WhiteSource Bolt@20
+  inputs:
+    advance: true
     
 - task: DotNetCoreCLI@2
   inputs:
