@@ -43,7 +43,7 @@ steps:
   inputs:
     command: publish
     publishWebProjects: false
-    projects: 'src/SimpleAPI/liminal-webapi.csproj'
+    projects: 'liminal-webapi/liminal-webapi.csproj'
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
 
