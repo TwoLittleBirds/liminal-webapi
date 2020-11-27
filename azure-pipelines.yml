@@ -24,20 +24,20 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-#- task: DotNetCoreCLI@2
-#  inputs:
-#    command: 'build'
-#    publishWebProjects: true
-#    arguments: '--configuration $(buildConfiguration) /p:Version=$(Build.BuildNumber)'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    publishWebProjects: true
+    arguments: '--configuration $(buildConfiguration) /p:Version=$(Build.BuildNumber)'
 
 #- task: ResharperCli@2
 #  inputs:
 #    solutionOrProjectPath: 'liminal-webapi.sln'
 #    failBuildLevelSelector: 'Error'
 
-- task: WhiteSource Bolt@20
-  inputs:
-    advance: true
+#- task: WhiteSource Bolt@20
+#  inputs:
+#    advance: true
     
 - task: DotNetCoreCLI@2
   inputs:
