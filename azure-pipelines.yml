@@ -28,7 +28,7 @@ steps:
   inputs:
     command: 'build'
     publishWebProjects: true
-    arguments: '--configuration $(buildConfiguration) /p:Version=$(Build.BuildNumber)'
+    arguments: '--configuration $(buildConfiguration)'
 
 #- task: ResharperCli@2
 #  inputs:
@@ -38,7 +38,14 @@ steps:
 #- task: WhiteSource Bolt@20
 #  inputs:
 #    advance: true
-    
+
+- task: AutoAppVersion@1
+  inputs:
+    ProjectFile: 'liminal-webapi/liminal-webapi.csproj'
+    VersionVariable: '$(Build.BuildNumber)'
+    SetAssemblyVersion: true
+    SetFileVersion: true
+  
 - task: DotNetCoreCLI@2
   inputs:
     command: publish
@@ -46,6 +53,7 @@ steps:
     projects: 'liminal-webapi/liminal-webapi.csproj'
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
+
 
 
 - task: PublishBuildArtifacts@1
