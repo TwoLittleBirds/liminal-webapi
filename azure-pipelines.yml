@@ -24,11 +24,11 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    publishWebProjects: true
-    arguments: '--configuration $(buildConfiguration)'
+#- task: DotNetCoreCLI@2
+#  inputs:
+#    command: 'build'
+#    publishWebProjects: true
+#    arguments: '--configuration $(buildConfiguration)'
 
 #- task: ResharperCli@2
 #  inputs:
@@ -38,22 +38,14 @@ steps:
 #- task: WhiteSource Bolt@20
 #  inputs:
 #    advance: true
-
-- task: AutoAppVersion@1
-    inputs:
-      ProjectFile: 'liminal-webapi/liminal-webapi.csproj'
-      VersionVariable: '$(Build.BuildNumber)'
-      DevOpsPAT: 'ea7scpricggvn3cmfdxxakn7dkb3xh6ohnnswrijq5qwilyraiyq'
-      
+     
 - task: DotNetCoreCLI@2
   inputs:
     command: publish
     publishWebProjects: false
     projects: 'liminal-webapi/liminal-webapi.csproj'
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    arguments: '--configuration $(BuildConfiguration) /p:Version=$(Build.BuildNumber) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
-
-
 
 - task: PublishBuildArtifacts@1
   inputs:
