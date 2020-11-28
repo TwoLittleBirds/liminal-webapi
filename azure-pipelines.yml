@@ -19,10 +19,18 @@ variables:
 steps:
 - task: NuGetToolInstaller@1
 
-
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
+
+- task: ResharperCli@2
+  inputs:
+    solutionOrProjectPath: 'liminal_webapi\liminal_webapi.sln'
+    failBuildLevelSelector: 'Error'
+
+- task: WhiteSource Bolt@20
+  inputs:
+    advance: true
 
 #- task: DotNetCoreCLI@2
 #  inputs:
@@ -30,15 +38,6 @@ steps:
 #    publishWebProjects: true
 #    arguments: '--configuration $(buildConfiguration)'
 
-#- task: ResharperCli@2
-#  inputs:
-#    solutionOrProjectPath: 'liminal-webapi.sln'
-#    failBuildLevelSelector: 'Error'
-
-#- task: WhiteSource Bolt@20
-#  inputs:
-#    advance: true
-     
 - task: DotNetCoreCLI@2
   inputs:
     command: publish
