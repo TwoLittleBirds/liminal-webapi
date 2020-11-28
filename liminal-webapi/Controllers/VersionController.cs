@@ -15,9 +15,9 @@ namespace liminal_webapi.Controllers
         }
 
         [HttpGet]
-        public string Get()
+        public ActionResult Get()
         {
-            return GetType().Assembly.GetName().Version.ToString();
+            return Ok(GetType().Assembly.GetName().Version.ToString());
         }
     }
 }
