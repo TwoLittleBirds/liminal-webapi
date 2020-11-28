@@ -30,7 +30,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: 'liminal-webapi-tests/liminal-webapi_tests.csproj'
+    projects: 'liminal-webapi_tests/liminal-webapi_tests.csproj'
     testRunTitle: 'liminal-webapi unit tests'
 
 - task: DotNetCoreCLI@2
