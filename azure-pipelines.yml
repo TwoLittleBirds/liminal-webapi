@@ -23,11 +23,6 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: ResharperCli@2
-  inputs:
-    solutionOrProjectPath: 'liminal_webapi.sln'
-    failBuildLevelSelector: 'Error'
-
 - task: WhiteSource Bolt@20
   inputs:
     advance: true
