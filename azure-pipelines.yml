@@ -32,11 +32,11 @@ steps:
   inputs:
     advance: true
 
-#- task: DotNetCoreCLI@2
-#  inputs:
-#    command: 'build'
-#    publishWebProjects: true
-#    arguments: '--configuration $(buildConfiguration)'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: 'liminal-webapi-tests/liminal-webapi_tests.csproj'
+    testRunTitle: 'liminal-webapi unit tests'
 
 - task: DotNetCoreCLI@2
   inputs:
