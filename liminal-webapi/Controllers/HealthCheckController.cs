@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace liminal_webapi.Controllers
 {
@@ -19,9 +15,9 @@ namespace liminal_webapi.Controllers
         }
 
         [HttpGet]
-        public string Get()
+        public ActionResult Get()
         {
-            return "Healthy";
+            return Ok("Healthy");
         }
     }
 }

@@ -586,23 +586,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pprit\\.nuget\\packages\\": {},
+    "C:\\Users\\peteb\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pprit\\Documents\\GitHub\\liminal-webapi\\liminal-webapi\\liminal-webapi.csproj",
+      "projectUniqueName": "C:\\GitHub\\liminal-webapi\\liminal-webapi\\liminal-webapi.csproj",
       "projectName": "liminal-webapi",
-      "projectPath": "C:\\Users\\pprit\\Documents\\GitHub\\liminal-webapi\\liminal-webapi\\liminal-webapi.csproj",
-      "packagesPath": "C:\\Users\\pprit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pprit\\Documents\\GitHub\\liminal-webapi\\liminal-webapi\\obj\\",
+      "projectPath": "C:\\GitHub\\liminal-webapi\\liminal-webapi\\liminal-webapi.csproj",
+      "packagesPath": "C:\\Users\\peteb\\.nuget\\packages\\",
+      "outputPath": "C:\\GitHub\\liminal-webapi\\liminal-webapi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\pprit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\peteb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
