@@ -22,6 +22,6 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'Docker Hub'
-        repository: 'twolittlebirds/liminal-webapi'
+        repository: 'twolittlebirds/liminal'
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/dockerfile.prod'
