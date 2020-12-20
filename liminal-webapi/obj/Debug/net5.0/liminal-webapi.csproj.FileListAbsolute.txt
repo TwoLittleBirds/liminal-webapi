@@ -19,7 +19,6 @@ C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\S
 C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.csprojAssemblyReference.cache
 C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.AssemblyInfoInputs.cache
 C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.AssemblyInfo.cs
@@ -72,3 +71,4 @@ C:\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.dll
 C:\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\ref\liminal-webapi.dll
 C:\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.pdb
 C:\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.genruntimeconfig.cache
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.csprojAssemblyReference.cache
