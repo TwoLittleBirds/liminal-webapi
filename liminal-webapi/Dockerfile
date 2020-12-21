@@ -6,12 +6,14 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
-WORKDIR /usr/src
-COPY ["liminal-webapi/liminal-webapi.csproj", "liminal-webapi/"]
-RUN dotnet restore "liminal-webapi/liminal-webapi.csproj"
+WORKDIR /src
 COPY . .
-WORKDIR "/usr/src/liminal-webapi"
-RUN dotnet build "liminal-webapi.csproj" -c Release -o /app/build
+RUN MSBuild.exe /property:Configuration=Release
+#COPY ["liminal-webapi/liminal-webapi.csproj", "liminal-webapi/"]
+#RUN dotnet restore "liminal-webapi/liminal-webapi.csproj"
+#COPY . .
+#WORKDIR "/src/liminal-webapi"
+#RUN dotnet build "liminal-webapi.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "liminal-webapi.csproj" -c Release -o /app/publish
