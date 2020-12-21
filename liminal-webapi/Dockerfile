@@ -10,7 +10,8 @@ WORKDIR /app
 #COPY ["liminal-webapi/liminal-webapi.csproj", "liminal-webapi/"]
 #RUN dotnet restore "liminal-webapi/liminal-webapi.csproj"
 COPY . .
-WORKDIR "/app/liminal-webapi"
+#WORKDIR "/app/liminal-webapi"
+WORKDIR "/app/liminal-webapi/liminal-webapi"
 RUN dotnet build "liminal-webapi.csproj" -c Release -o /app/build
 
 FROM build AS publish
