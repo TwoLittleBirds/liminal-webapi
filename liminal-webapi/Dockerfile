@@ -8,7 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
 COPY . .
-RUN MSBuild.exe /property:Configuration=Release
+RUN dotnet build "liminal-webapi.sln" -c Release -o /app/build
 #COPY ["liminal-webapi/liminal-webapi.csproj", "liminal-webapi/"]
 #RUN dotnet restore "liminal-webapi/liminal-webapi.csproj"
 #COPY . .
