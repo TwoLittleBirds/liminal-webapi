@@ -23,6 +23,6 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'Docker Hub'
-        repository: 'twolittlebirds/liminal'
+        repository: 'twolittlebirds/liminal-webapi'
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/liminal-webapi/Dockerfile'
