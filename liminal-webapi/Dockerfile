@@ -1,9 +1,9 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
-WORKDIR /app
+#FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
+#WORKDIR /app
 #EXPOSE 80
-EXPOSE 443
+#EXPOSE 443
 
 #NEW
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build-env
@@ -21,4 +21,5 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim
 WORKDIR /app
 COPY --from=build-env /app/out .
+EXPOSE 80
 ENTRYPOINT ["dotnet", "liminal-webapi.dll"]
