@@ -24,4 +24,4 @@ RUN dotnet publish -c Release -o out
 FROM base AS final
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "liminal-webapi.dll"]
+ENTRYPOINT ["dotnet", "liminal-webapi.exe"]
