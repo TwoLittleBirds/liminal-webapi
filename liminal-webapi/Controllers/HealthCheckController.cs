@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace liminal_webapi.Controllers
 {
@@ -17,6 +18,7 @@ namespace liminal_webapi.Controllers
         [HttpGet]
         public ActionResult Get()
         {
+            Log.Information("Serilog is logging!!!");
             return Ok("Healthy");
         }
     }

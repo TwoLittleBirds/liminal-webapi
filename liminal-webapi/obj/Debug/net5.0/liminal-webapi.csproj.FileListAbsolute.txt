@@ -72,3 +72,16 @@ C:\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\ref\liminal-webapi.dll
 C:\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.pdb
 C:\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.genruntimeconfig.cache
 C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\obj\Debug\net5.0\liminal-webapi.csprojAssemblyReference.cache
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Serilog.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Serilog.AspNetCore.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Serilog.Extensions.Hosting.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Serilog.Extensions.Logging.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Serilog.Formatting.Compact.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Serilog.Settings.Configuration.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Serilog.Sinks.Async.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Serilog.Sinks.Console.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
+C:\Users\pprit\Documents\GitHub\liminal-webapi\liminal-webapi\bin\Debug\net5.0\Serilog.Sinks.File.dll
